@@ -4,6 +4,7 @@
 
 <beans>
 
-<bean id="triangle" class="beans.Triangle" />
+	<bean id="triangle" class="beans.Triangle" />
+	
 
 </beans>
