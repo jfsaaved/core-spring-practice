@@ -4,6 +4,10 @@ public class Triangle implements Shape{
 	
 	private String type;
 	
+	public Triangle (String type){
+		this.type = type;
+	}
+	
 	public String getType(){
 		return type;
 	}

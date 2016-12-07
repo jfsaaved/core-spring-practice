@@ -5,7 +5,7 @@
 <beans>
 
 	<bean id="triangle" class="beans.Triangle">
-		<property name="type" value="Triangle" />
+		<constructor-arg value="Triangle" />
 	</bean>
 	
 
