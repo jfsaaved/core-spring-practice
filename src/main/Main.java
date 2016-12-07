@@ -4,13 +4,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import beans.Shape;
+import beans.Triangle;
 
 public class Main {
 	
 	  public static void main(String[] args) {
 		  
 		  ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		  Shape triangleBean = (Shape) context.getBean("triangle");
+		  Triangle triangleBean = (Triangle) context.getBean("triangle");
 		  triangleBean.draw();
 
 	  }

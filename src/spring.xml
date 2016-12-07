@@ -4,7 +4,9 @@
 
 <beans>
 
-	<bean id="triangle" class="beans.Triangle" />
+	<bean id="triangle" class="beans.Triangle">
+		<property name="type" value="Triangle" />
+	</bean>
 	
 
 </beans>
