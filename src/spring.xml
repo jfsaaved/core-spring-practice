@@ -5,7 +5,8 @@
 <beans>
 
 	<bean id="triangle" class="beans.Triangle">
-		<constructor-arg value="Triangle" />
+		<constructor-arg index = "0" value = "Triangle" />
+		<constructor-arg index = "1" value = "20" />
 	</bean>
 	
 
