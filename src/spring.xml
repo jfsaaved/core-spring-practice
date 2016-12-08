@@ -5,8 +5,29 @@
 <beans>
 
 	<bean id="triangle" class="beans.Triangle">
-		<constructor-arg index = "0" value = "Triangle" />
-		<constructor-arg index = "1" value = "20" />
+		<constructor-arg index="0" value="Triangle" />
+		<constructor-arg index="1" value="20" />
+	</bean>
+	
+	<bean id="circle" class="beans.Circle">
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+		<property name="pointC" ref="pointC"/>
+	</bean>
+	
+	<bean id="pointA" class="beans.Point">
+		<property name="x" value="1"/>
+		<property name="y" value="4"/>
+	</bean>
+	
+	<bean id="pointB" class="beans.Point">
+		<property name="x" value="2"/>
+		<property name="y" value="5"/>
+	</bean>
+	
+	<bean id="pointC" class="beans.Point">
+		<property name="x" value="3"/>
+		<property name="y" value="6"/>
 	</bean>
 	
 

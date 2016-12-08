@@ -30,6 +30,7 @@ public class Triangle implements Shape{
 		this.size = size;
 	}
 	
+	@Override
 	public void draw() {
 		System.out.println(this.type + " of size "+ this.size +" drawn. ");
 	}
