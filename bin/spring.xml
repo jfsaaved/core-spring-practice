@@ -9,6 +9,16 @@
 		<constructor-arg index="1" value="20" />
 	</bean>
 	
+	<bean id="shapechild1" class="beans.ShapeChild1">
+		<property name="points">
+			<list>
+				<ref bean="pointA"/>
+				<ref bean="pointB"/>
+				<ref bean="pointC"/>
+			</list>
+		</property>
+	</bean>
+	
 	<bean id="circle" class="beans.Circle">
 		<property name="pointA" ref="pointA"/>
 		<property name="pointB" ref="pointB"/>
