@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import beans.Circle;
+import beans.Rectangle;
 import beans.Shape;
 import beans.Triangle;
 
@@ -19,5 +20,9 @@ public class Main {
 		  Circle circleBean = (Circle) context.getBean("circle");
 		  circleBean.draw();
 		  
+		  Rectangle rectangleBean = (Rectangle) context.getBean("rectangle");
+		  rectangleBean.draw();
+		  
 	  }
+	  
 }

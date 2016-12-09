@@ -13,6 +13,29 @@
 		<property name="pointA" ref="pointA"/>
 		<property name="pointB" ref="pointB"/>
 		<property name="pointC" ref="pointC"/>
+		<property name="type" value="Circle"/>
+	</bean>
+	
+	<bean id="rectangle" class="beans.Rectangle">
+		<property name="type" value="Rectangle"/>
+		<property name="pointA">
+			<bean class="beans.Point">
+				<property name="x" value="0"/>
+				<property name="y" value="0"/>
+			</bean>
+		</property>
+		<property name="pointB">
+			<bean class="beans.Point">
+				<property name="x" value="1"/>
+				<property name="y" value="1"/>
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="beans.Point">
+				<property name="x" value="2"/>
+				<property name="y" value="2"/>
+			</bean>
+		</property>
 	</bean>
 	
 	<bean id="pointA" class="beans.Point">

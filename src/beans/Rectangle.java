@@ -1,6 +1,6 @@
 package beans;
 
-public class Circle implements Shape {
+public class Rectangle implements Shape{
 	
 	private Point pointA;
 	private Point pointB;
@@ -14,7 +14,7 @@ public class Circle implements Shape {
 	public void setType(String type){
 		this.type = type;
 	}
-	
+
 	public Point getPointA() {
 		return pointA;
 	}
@@ -43,7 +43,8 @@ public class Circle implements Shape {
 	public void draw() {
 		System.out.println(this.type + " X for points A, B, and C: " + this.pointA.getX() + ", " + this.pointB.getX() + ", " + this.pointC.getX());
 		System.out.println(this.type + " Y for points A, B, and C: " + this.pointA.getY() + ", " + this.pointB.getY() + ", " + this.pointC.getY());
-		
 	}
+	
+	
 
 }
