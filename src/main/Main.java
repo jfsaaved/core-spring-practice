@@ -7,6 +7,7 @@ import beans.Circle;
 import beans.Rectangle;
 import beans.Shape;
 import beans.ShapeChild1;
+import beans.ShapeChild2;
 import beans.Triangle;
 
 public class Main {
@@ -26,6 +27,9 @@ public class Main {
 		  
 		  ShapeChild1 shapeChild1Bean = (ShapeChild1) context.getBean("shapechild1");
 		  shapeChild1Bean.draw();
+		  
+		  ShapeChild2 shapeChild2Bean = (ShapeChild2) context.getBean("shapechild2");
+		  shapeChild2Bean.draw();
 		  
 	  }
 	  

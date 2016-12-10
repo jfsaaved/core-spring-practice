@@ -48,6 +48,9 @@
 		</property>
 	</bean>
 	
+	<bean id="shapechild2" class="beans.ShapeChild2" autowire="byName">
+	</bean>
+	
 	<bean id="pointA" class="beans.Point">
 		<property name="x" value="1"/>
 		<property name="y" value="4"/>
