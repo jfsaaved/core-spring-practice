@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import beans.Circle;
 import beans.Rectangle;
 import beans.Shape;
+import beans.ShapeAware;
 import beans.ShapeChild1;
 import beans.ShapeChild2;
 import beans.Triangle;
@@ -30,6 +31,9 @@ public class Main {
 		  
 		  ShapeChild2 shapeChild2Bean = (ShapeChild2) context.getBean("shapechild2");
 		  shapeChild2Bean.draw();
+		  
+		  ShapeAware shapeAwareBean = (ShapeAware) context.getBean("shapeaware");
+		  shapeAwareBean.draw();
 		  
 	  }
 	  

@@ -66,5 +66,8 @@
 		<property name="y" value="6"/>
 	</bean>
 	
+	<bean id="shapeaware" class="beans.ShapeAware" autowire="byName">
+	</bean>
+	
 
 </beans>
