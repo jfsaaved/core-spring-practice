@@ -9,6 +9,7 @@ import beans.Shape;
 import beans.ShapeAware;
 import beans.ShapeChild1;
 import beans.ShapeChild2;
+import beans.ShapeInheritance;
 import beans.Triangle;
 
 public class Main {
@@ -34,6 +35,12 @@ public class Main {
 		  
 		  ShapeAware shapeAwareBean = (ShapeAware) context.getBean("shapeaware");
 		  shapeAwareBean.draw();
+		  
+		  ShapeInheritance shapeChild = (ShapeInheritance) context.getBean("inheritchild");
+		  shapeChild.draw();
+		  
+		  ShapeInheritance shapeParent = (ShapeInheritance) context.getBean("inheritparent");
+		  shapeParent.draw();
 		  
 	  }
 	  

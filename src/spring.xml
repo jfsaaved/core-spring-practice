@@ -69,5 +69,15 @@
 	<bean id="shapeaware" class="beans.ShapeAware" autowire="byName">
 	</bean>
 	
+	<bean id="inheritparent" class="beans.ShapeInheritance">
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+	</bean>
+	
+	<bean id="inheritchild" class="beans.ShapeInheritance">
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+	</bean>
+	
 
 </beans>
