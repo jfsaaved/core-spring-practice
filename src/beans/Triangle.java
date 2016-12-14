@@ -1,6 +1,8 @@
 package beans;
 
-public class Triangle implements Shape{
+import org.springframework.beans.factory.InitializingBean;
+
+public class Triangle implements Shape, InitializingBean{
 	
 	private String type;
 	private int size;
@@ -33,6 +35,12 @@ public class Triangle implements Shape{
 	@Override
 	public void draw() {
 		System.out.println(this.type + " of size "+ this.size +" drawn. ");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(this.type + " Initialized");
 	}
 
 }

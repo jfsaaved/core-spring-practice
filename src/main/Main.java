@@ -1,6 +1,7 @@
 package main;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import beans.Circle;
@@ -14,10 +15,13 @@ import beans.Triangle;
 
 public class Main {
 	
-	  public static void main(String[] args) {
+	  private static AbstractApplicationContext context;
+
+	public static void main(String[] args) {
 		  
-		  ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-				  
+		  context = new ClassPathXmlApplicationContext("spring.xml");
+		  context.registerShutdownHook();	  
+		  
 		  Triangle triangleBean = (Triangle) context.getBean("triangle");
 		  triangleBean.draw();
 		  
