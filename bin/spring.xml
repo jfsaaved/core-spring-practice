@@ -79,5 +79,7 @@
 		<property name="pointB" ref="pointB"/>
 	</bean>
 	
+	<bean class="postprocessor.DisplayNameBeanPostProcessor"/>
+	
 
 </beans>
