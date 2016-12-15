@@ -46,5 +46,13 @@ public class Rectangle implements Shape{
 	}
 	
 	
+	public void myInit() {
+		System.out.println(this.type + " Initialized");
+	}
+	
+	public void cleanUp() {
+		System.out.println(this.type + " Finished");
+	}
+	
 
 }

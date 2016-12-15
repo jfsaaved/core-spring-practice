@@ -26,7 +26,7 @@
 		<property name="type" value="Circle"/>
 	</bean>
 	
-	<bean id="rectangle" class="beans.Rectangle">
+	<bean id="rectangle" class="beans.Rectangle" init-method="myInit" destroy-method="cleanUp">
 		<property name="type" value="Rectangle"/>
 		<property name="pointA">
 			<bean class="beans.Point">

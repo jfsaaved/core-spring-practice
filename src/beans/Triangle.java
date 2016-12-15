@@ -1,8 +1,9 @@
 package beans;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle implements Shape, InitializingBean{
+public class Triangle implements Shape, InitializingBean, DisposableBean{
 	
 	private String type;
 	private int size;
@@ -41,6 +42,12 @@ public class Triangle implements Shape, InitializingBean{
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println(this.type + " Initialized");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(this.type + " Finished");
 	}
 
 }
