@@ -52,8 +52,8 @@
 	</bean>
 	
 	<bean id="pointA" class="beans.Point">
-		<property name="x" value="1"/>
-		<property name="y" value="4"/>
+		<property name="x" value="${pointA.pointX}"/>
+		<property name="y" value="${pointA.pointY}"/>
 	</bean>
 	
 	<bean id="pointB" class="beans.Point">
@@ -79,7 +79,11 @@
 		<property name="pointB" ref="pointB"/>
 	</bean>
 	
-	<bean class="postprocessor.DisplayNameBeanPostProcessor"/>
-	
+	<!--<bean class="postprocessor.DisplayNameBeanPostProcessor"/>-->
+
+	<bean class="postprocessor.BeanFactoryPP"/>	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations" value="config.properties"/>
+	</bean>
 
 </beans>

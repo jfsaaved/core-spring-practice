@@ -15,12 +15,13 @@ import beans.Triangle;
 
 public class Main {
 	
-	  private static AbstractApplicationContext context;
+	  //private static AbstractApplicationContext context;
 
 	public static void main(String[] args) {
 		  
-		  context = new ClassPathXmlApplicationContext("spring.xml");
-		  context.registerShutdownHook();	  
+		  ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		  
+		  //context.registerShutdownHook();	  
 		  
 		  Triangle triangleBean = (Triangle) context.getBean("triangle");
 		  triangleBean.draw();
