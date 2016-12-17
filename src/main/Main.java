@@ -8,6 +8,7 @@ import beans.Circle;
 import beans.Rectangle;
 import beans.Shape;
 import beans.ShapeAware;
+import beans.ShapeCenter;
 import beans.ShapeChild1;
 import beans.ShapeChild2;
 import beans.ShapeInheritance;
@@ -46,6 +47,9 @@ public class Main {
 		  
 		  ShapeInheritance shapeParent = (ShapeInheritance) context.getBean("inheritparent");
 		  shapeParent.draw();
+		  
+		  ShapeCenter shapeCenter = (ShapeCenter) context.getBean("shapecenter");
+		  shapeCenter.draw();
 		  
 	  }
 	  
