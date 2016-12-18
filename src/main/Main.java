@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import beans.Circle;
 import beans.Rectangle;
 import beans.Shape;
+import beans.ShapeAutowire;
 import beans.ShapeAware;
 import beans.ShapeCenter;
 import beans.ShapeChild1;
@@ -50,6 +51,9 @@ public class Main {
 		  
 		  ShapeCenter shapeCenter = (ShapeCenter) context.getBean("shapecenter");
 		  shapeCenter.draw();
+		  
+		  ShapeAutowire shapeAutowire = (ShapeAutowire) context.getBean("shapeautowire");
+		  shapeAutowire.draw();
 		  
 	  }
 	  
