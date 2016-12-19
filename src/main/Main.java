@@ -17,10 +17,11 @@ import beans.Triangle;
 
 public class Main {
 	
-	  //private static AbstractApplicationContext context;
+	 // private static AbstractApplicationContext context;
 
 	public static void main(String[] args) {
 		  
+		  //AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		  ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		  
 		  //context.registerShutdownHook();	  
