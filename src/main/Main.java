@@ -12,6 +12,7 @@ import beans.ShapeAware;
 import beans.ShapeCenter;
 import beans.ShapeChild1;
 import beans.ShapeChild2;
+import beans.ShapeComponent;
 import beans.ShapeInheritance;
 import beans.Triangle;
 
@@ -55,6 +56,9 @@ public class Main {
 		  
 		  ShapeAutowire shapeAutowire = (ShapeAutowire) context.getBean("shapeautowire");
 		  shapeAutowire.draw();
+		  
+		  ShapeComponent shapeComponent = (ShapeComponent) context.getBean("shapeComponent");
+		  shapeComponent.draw();
 		  
 	  }
 	  

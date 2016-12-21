@@ -6,17 +6,19 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
 
-public class ShapeAutowire implements Shape {
-	
+
+@Component
+public class ShapeComponent implements Shape{
+
 	private Point center;
 	private Point center2;
 
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		System.out.println("-------- DRAWING SHAPE AUTOWIRE -----------");
+		System.out.println("-------- DRAWING SHAPE COMPONENT -----------");
 		System.out.println("ShapeCenter center is: " + center.getX());
 		System.out.println("ShapeCenter center2 is: " + center2.getX());
 	}
