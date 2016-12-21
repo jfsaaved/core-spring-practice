@@ -14,6 +14,7 @@ import beans.ShapeChild1;
 import beans.ShapeChild2;
 import beans.ShapeComponent;
 import beans.ShapeInheritance;
+import beans.ShapeMessageSource;
 import beans.Triangle;
 
 public class Main {
@@ -59,6 +60,9 @@ public class Main {
 		  
 		  ShapeComponent shapeComponent = (ShapeComponent) context.getBean("shapeComponent");
 		  shapeComponent.draw();
+		  
+		  ShapeMessageSource messageSource = (ShapeMessageSource) context.getBean("shapeMessageSource");
+		  messageSource.draw();
 		  
 		  System.out.println(context.getMessage("greeting", null, "Default Greeting", null));
 		  

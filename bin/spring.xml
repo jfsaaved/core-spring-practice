@@ -110,6 +110,9 @@
 	<bean id="shapeautowire" class="beans.ShapeAutowire"> 
 	</bean>
 	
+	<bean id="shapeMessageSource" class="beans.ShapeMessageSource"> 
+	</bean>
+	
 
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
