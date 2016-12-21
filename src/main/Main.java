@@ -60,6 +60,8 @@ public class Main {
 		  ShapeComponent shapeComponent = (ShapeComponent) context.getBean("shapeComponent");
 		  shapeComponent.draw();
 		  
+		  System.out.println(context.getMessage("greeting", null, "Default Greeting", null));
+		  
 	  }
 	  
 }
