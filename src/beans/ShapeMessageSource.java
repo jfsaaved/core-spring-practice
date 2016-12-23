@@ -22,6 +22,7 @@ public class ShapeMessageSource implements Shape{
 		System.out.println("ShapeCenter center is: " + center.getX());
 		System.out.println("ShapeCenter center2 is: " + center2.getX());
 		System.out.println("Message Source: " + this.messageSource.getMessage("greeting", null, "Default Greeting", null));
+		System.out.println("Drawing Point: " + this.messageSource.getMessage("drawing.point", new Object[]{center.getX()}, "Default Greeting", null));
 	}
 	
 	public Point getCenter(){

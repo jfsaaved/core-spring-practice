@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
+apply plugin: 'aspectj'
 
 sourceSets.main.java.srcDirs = ['src']
 mainClassName = 'main.Main'
@@ -22,8 +23,6 @@ jar {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = 'com.example.MyApp'
-
 
 dependencies {
 	compile 'org.springframework:spring-context:4.3.4.RELEASE'
@@ -34,3 +33,22 @@ dependencies {
 
 // tag::wrapper[]
 // end::wrapper[]
+
+
+buildscript {
+    repositories {
+        maven {
+            url "https://maven.eveoh.nl/content/repositories/releases"
+        }
+    }
+
+    dependencies {
+        classpath "nl.eveoh:gradle-aspectj:1.6"
+    }
+}
+
+
+project.ext {
+    aspectjVersion = '1.8.4'
+}
+
