@@ -9,6 +9,8 @@ public class DrawEvent extends ApplicationEvent {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+	public String toString() {
+		return "Draw Event Occured";
+	}
 
 }

@@ -6,10 +6,13 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.MessageSource;
 
-public class ShapeMessageSource implements Shape{
+public class ShapeMessageSource implements Shape, ApplicationEventPublisherAware  {
 	
+	private ApplicationEventPublisher publisher;
 	private Point center;
 	private Point center2;
 	@Autowired
@@ -23,6 +26,8 @@ public class ShapeMessageSource implements Shape{
 		System.out.println("ShapeCenter center2 is: " + center2.getX());
 		System.out.println("Message Source: " + this.messageSource.getMessage("greeting", null, "Default Greeting", null));
 		System.out.println("Drawing Point: " + this.messageSource.getMessage("drawing.point", new Object[]{center.getX()}, "Default Greeting", null));
+		DrawEvent event = new DrawEvent(this);
+		publisher.publishEvent(event);
 	}
 	
 	public Point getCenter(){
@@ -60,6 +65,12 @@ public class ShapeMessageSource implements Shape{
 
 	public void setMessageSource(MessageSource messageSource) {
 		this.messageSource = messageSource;
+	}
+
+	@Override
+	public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+		// TODO Auto-generated method stub
+		this.publisher = applicationEventPublisher;
 	}
 
 }
